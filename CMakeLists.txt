@@ -4,5 +4,5 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_subdirectory(libdshowcapture)
 
-add_executable(webcamprops main.cpp)
+add_executable(webcamprops WIN32 main.cpp)
 target_link_libraries(webcamprops libdshowcapture)

@@ -27,6 +27,8 @@ size_t lazy_find(const device_vec& list, const std::string& name)
 	throw std::runtime_error("cannot find your dang webcam called " + name);
 }
 
+//we use Win32 subsystem, but still want the UNIX C entry point please
+#pragma comment(linker, "/subsystem:windows /ENTRY:mainCRTStartup")
 int main(int argc, char** argv)
 {
 	//make sure args[0] will contain a string
